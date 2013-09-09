@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C3574ADD-879F-4082-9C1F-8C433CB597B7}</ProjectGuid>
+    <RootNamespace>TikiTank</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>c:\Program Files (x86)\arduino-1.0.5\hardware\arduino\cores\arduino;c:\Program Files (x86)\arduino-1.0.5\hardware\arduino\variants\standard;c:\Program Files (x86)\arduino-1.0.5\libraries\Wire;c:\Program Files (x86)\arduino-1.0.5\libraries\Wire\utility;c:\Program Files (x86)\arduino-1.0.5\libraries\SPI;c:\Program Files (x86)\arduino-1.0.5\libraries\SPI\utility;D:\Home\Documents\Arduino\libraries\Adafruit_RGB_LCD;D:\Home\Documents\Arduino\libraries\Adafruit_RGB_LCD\utility;D:\Home\Documents\Arduino\libraries\LPD8806;D:\Home\Documents\Arduino\libraries\LPD8806\utility;c:\program files (x86)\arduino-1.0.5\hardware\tools\avr\avr\include\;c:\program files (x86)\arduino-1.0.5\hardware\tools\avr\avr\include\avr\;c:\program files (x86)\arduino-1.0.5\hardware\tools\avr\avr\;c:\program files (x86)\arduino-1.0.5\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>D:\Home\Documents\Arduino\TikiTank\Visual Micro\.TikiTank.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATmega328P__;ARDUINO=105;__AVR__;F_CPU=16000000L;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="TikiTank.ino">
+      <FileType>CppCode</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutoThreadEffect.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="EffectRotator.h" />
+    <ClInclude Include="IProgram.h" />
+    <ClInclude Include="RainbowEffect.h" />
+    <ClInclude Include="SolidColorEffect.h" />
+    <ClInclude Include="StrobeEffect.h" />
+    <ClInclude Include="TestColorEffect.h" />
+    <ClInclude Include="View.h" />
+    <ClInclude Include="ThreadEffect.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="Visual Micro\.TikiTank.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutoThreadEffect.cpp" />
+    <ClCompile Include="EffectRotator.cpp" />
+    <ClCompile Include="RainbowEffect.cpp" />
+    <ClCompile Include="SolidColorEffect.cpp" />
+    <ClCompile Include="StrobeEffect.cpp" />
+    <ClCompile Include="TestColorEffect.cpp" />
+    <ClCompile Include="View.cpp" />
+    <ClCompile Include="ThreadEffect.cpp" />
+    <ClCompile Include="Controller.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.upload.port="COM4" arduino.board.name="uno" arduino.board.desc="Arduino Uno" arduino.board.property_bag="name=Arduino Uno&#xD;&#xA;upload.protocol=arduino&#xD;&#xA;upload.maximum_size=32256&#xD;&#xA;upload.speed=115200&#xD;&#xA;bootloader.low_fuses=0xff&#xD;&#xA;bootloader.high_fuses=0xde&#xD;&#xA;bootloader.extended_fuses=0x05&#xD;&#xA;bootloader.path=optiboot&#xD;&#xA;bootloader.file=optiboot_atmega328.hex&#xD;&#xA;bootloader.unlock_bits=0x3F&#xD;&#xA;bootloader.lock_bits=0x0F&#xD;&#xA;build.mcu=atmega328p&#xD;&#xA;build.f_cpu=16000000L&#xD;&#xA;build.core=arduino&#xD;&#xA;build.variant=standard&#xD;&#xA;runtime.ide.path=c:\Program Files (x86)\arduino-1.0.5\&#xD;&#xA;build.system.path=c:\Program Files (x86)\arduino-1.0.5\hardware\arduino\system&#xD;&#xA;software=ARDUINO&#xD;&#xA;runtime.ide.version=105&#xD;&#xA;vm.core.include=arduino.h&#xD;&#xA;vm.boardsource.path=c:\Program Files (x86)\arduino-1.0.5\hardware\arduino&#xD;&#xA;vm.boardsource.name=boards.txt&#xD;&#xA;vm.platformname.name=&#xD;&#xA;compiler.path=c:\Program Files (x86)\arduino-1.0.5\hardware\tools\avr\bin\&#xD;&#xA;includes= -I&quot;c:\Program Files (x86)\arduino-1.0.5\hardware\arduino\cores\arduino&quot;  -I&quot;c:\Program Files (x86)\arduino-1.0.5\hardware\arduino\variants\standard&quot;  -I&quot;c:\Program Files (x86)\arduino-1.0.5\libraries\Wire&quot;  -I&quot;c:\Program Files (x86)\arduino-1.0.5\libraries\SPI&quot;  -I&quot;D:\Home\Documents\Arduino\libraries\Adafruit_RGB_LCD&quot;  -I&quot;D:\Home\Documents\Arduino\libraries\LPD8806&quot; &#xD;&#xA;build.path=C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno&#xD;&#xA;build.project_name=TikiTank&#xD;&#xA;build.variant.path=c:\Program Files (x86)\arduino-1.0.5\hardware\arduino\variants\standard&#xD;&#xA;archive_file=core.a&#xD;&#xA;object_file=&quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\LPD8806\LPD8806.cpp.o&quot;&#xD;&#xA;source_file=&quot;D:\Home\Documents\Arduino\libraries\LPD8806\LPD8806.cpp&quot;&#xD;&#xA;object_files=&quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\Constants.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\Controller.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\SolidColorEffect.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\StrobeEffect.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\ThreadEffect.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\TikiTank.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\View.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\Wire\Wire.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\Wire\utility\twi.c.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\SPI\SPI.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\Adafruit_RGB_LCD\Adafruit_MCP23017.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\Adafruit_RGB_LCD\Adafruit_RGBLCDShield.cpp.o&quot; &quot;C:\Users\pabans\AppData\Local\VMicro\Arduino\Builds\TikiTank\uno\LPD8806\LPD8806.cpp.o&quot; &#xD;&#xA;" arduino.build.mcu="atmega328p" arduino.build.f_cpu="16000000L" arduino.build.core="arduino" arduino.upload.protocol="arduino" arduino.upload.speed="115200" arduino.upload.maximum_size="32256" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
