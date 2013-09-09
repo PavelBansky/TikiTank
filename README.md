@@ -16,7 +16,7 @@ What's inside?
 
 The repository contains three Arduino projects written in C++. Each project can be opened and compiled in Arduino IDE. However, Visual Studio 2012 with [Arduino extensions](http://www.visualmicro.com/) is recommended as a best way to edit and compile the source code. 
 
-**TikiTank** is firmware for Teensy++ 2.0 unit that controls the tank thread effects
+**TikiTank** is firmware for Teensy++ 2.0 unit that controls the tank tread effects
 
 **TikiCannon** is firmware for ATmega328 that controls the tank cannon effect
 
