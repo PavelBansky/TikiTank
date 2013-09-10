@@ -16,7 +16,7 @@
 /**
 	Auto Thread Effect
 
-	Program to control tank thread effect based on the data from speed sensor
+	Program to control tank tread effect based on the data from speed sensor
 */
 class AutoThreadEffect : public IProgram
 {

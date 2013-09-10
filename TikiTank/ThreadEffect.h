@@ -16,7 +16,7 @@
 /**
 	Thread Effect
 
-	Program to control tank thread effect based on the user input (manual mode)
+	Program to control tank tread effect based on the user input (manual mode)
 */
 class ThreadEffect : public IProgram
 {

@@ -16,7 +16,7 @@
 /**
 	Rainbow Effect
 
-	Program displays rotating rainbow on the tank thread
+	Program displays rotating rainbow on the tank tread
 */
 class RainbowEffect : public IProgram
 {
